@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="myway.group.anticor.ui.activity.fragment.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+       <!-- <action
+            android:id="@+id/action_nav_home_to_categoryFragment"
+            app:destination="@id/categoryFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/scale_down_to_left"
+            app:popEnterAnim="@anim/scale_up_to_right"
+            app:popExitAnim="@anim/to_right">
+            <argument
+                android:name="categoryId"
+                app:argType="long" />
+        </action>-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="myway.group.anticor.ui.activity.fragment.account.AccountFragment"
+        android:label="AccountFragment" >
+        <action
+            android:id="@+id/action_accountFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wishlistFragment"
+        android:name="myway.group.anticor.ui.activity.fragment.statistic.StatisticFragment"
+        android:label="WishlistFragment">
+
+        <action
+            android:id="@+id/action_wishlistFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SendFragment"
+        android:name="myway.group.anticor.ui.activity.fragment.send.SendFragment"
+        android:label="WishlistFragment">
+
+        <action
+            android:id="@+id/action_wishlistFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AsosiyFragment"
+        android:name="myway.group.anticor.ui.activity.fragment.menu.AsosiyFragment"
+        android:label="WishlistFragment">
+
+        <action
+            android:id="@+id/action_wishlistFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+</navigation>
